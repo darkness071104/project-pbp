@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+    
+  h1 {
+    font-family: Arial, Helvetica, sans-serif; /* Ganti jenis font */
+    font-size: 45px; /* Ukuran font yang lebih besar */
+    color: var(--mcol0); /* Warna teks */
+    margin-bottom: 30px; /* Jarak dari atas */
+    text-align: center; /* Pusatkan teks */
+  }
+  
+  :root {
+    --bgcol: #37474F; /* Warna latar belakang utama */
+    --mcol0: #29B6F6; /* Warna utama 0 */
+    --mcol1: #2196F3; /* Warna utama 1 */
+    --mcol2: #1976D2; /* Warna utama 2 */
+    --txtcol0: #90A4AE;
+    --txtcol1: #607D8B;
+    --whitecol: #ECEFF1;
+    --darkcol: #263238;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 13vh; /* Menggeser ke atas sedikit */
+    background-image: url(1.jpg);
+    background-size:1540px 820px;
+  }
+  
+  #puzzle_container {
+    position: relative;
+    width: 50vh;
+    height: 50vh;
+    background-color: var(--darkcol);
+    border-radius: 8px; /* Bentuk border */
+    border: 2px solid var(--mcol0); /* Tebal border */
+    box-shadow: 0px 8px 0px var(--mcol0);
+  }
+  
+  .puzzle_block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 33.4%;
+    height: 33.4%;
+    background-color: var(--mcol1); /* Warna latar belakang blok */
+    color: var(--whitecol);
+    font-size: 10vh;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 3%;
+    cursor: pointer;
+    user-select: none;
+    transition: left 0.3s, top 0.3s;
+  }
+  
+  /* reset container */
+  #reset_container {
+    width: 50vh;
+    background-color: var(--darkcol);
+    border-radius: 12px; /* Bentuk border */
+    margin-top: 2vh; /* Menggeser ke atas sedikit */
+    text-align: center; /* Pusatkan teks dalam container */
+  }
+  
+  .reset_button {
+    display: block; /* Ubah menjadi tampilan blok */
+    background-color: var(--mcol2); /* Warna latar belakang tombol */
+    color: var(--whitecol); /* Warna teks tombol */
+    font-size: 3vh;
+    font-weight: bold;
+    padding: 10px 0; /* Tambahkan padding atas dan bawah */
+    margin: 4px;
+    cursor: pointer;
+    transition: font-size 0.3s;
+    border: none; /* Hapus border */
+    border-radius: 8px; /* Bentuk border */
+    text-align: center; /* Pusatkan teks dalam tombol */
+  }
+  
+  .reset_button:hover {
+    opacity: 0.8;
+    font-size: 3.5vh;
+  }
+  
+  .reset_button.active {
+    background-color: var(--mcol0); /* Warna latar belakang tombol aktif */
+  }
+  
